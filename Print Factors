@@ -1,0 +1,21 @@
+Write a program that takes a number as input and prints all its factors except 1 and the number itself.. If the number has only two factors (1 and the number itself), then the program should print -1.
+
+
+import java.util.*;
+public class Solution {
+    
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        int check=2;
+        boolean flag=true;
+        while(check<=input/2){
+            if(input % check==0){
+                System.out.print(check+" ");
+                flag=false;
+            }check++;
+        }
+        if(flag==true){
+            System.out.println(-1);
+        }
